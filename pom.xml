@@ -15,6 +15,7 @@
         <module>go-shop-dao</module>
         <module>go-shop-entity</module>
         <module>go-shop-redis</module>
+        <module>go-shop-auth</module>
     </modules>
 
     <properties>

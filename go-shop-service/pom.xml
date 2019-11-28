@@ -20,6 +20,11 @@
             <artifactId>go-shop-dao</artifactId>
             <version>${shop.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.dragon</groupId>
+            <artifactId>go-shop-auth</artifactId>
+            <version>${shop.version}</version>
+        </dependency>
     </dependencies>
 
 
