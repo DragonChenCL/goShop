@@ -1,15 +1,17 @@
 package com.dragon.entity.base;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Builder;
 import lombok.Data;
 
 @Data
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Result<T> {
-    private Integer code;
+    private final Integer code;
 
-    private String message;
+    private final String message;
 
-    private T data;
+    private final T data;
 
     private Result(Builder<T> builder) {
         this.code = builder.code;
@@ -17,7 +19,7 @@ public class Result<T> {
         this.data = builder.data;
     }
 
-    public Result.Builder builder(){
+    public static<T> Result.Builder<T> builder(){
         return new Result.Builder<>();
     }
 
@@ -28,27 +30,27 @@ public class Result<T> {
 
         private T data;
 
-        public Builder message(String message){
+        public Builder<T> message(String message){
             this.message = message;
             return this;
         }
 
-        public Builder data(T data){
+        public Builder<T> data(T data){
             this.data = data;
             return this;
         }
 
-        public Builder success(){
+        public Builder<T> success(){
             this.code = 200;
             return this;
         }
 
-        public Builder fail(){
+        public Builder<T> fail(){
             this.code = 500;
             return this;
         }
 
-        public Result build(){
+        public Result<T> build(){
             return new Result<T>(this);
         }
     }

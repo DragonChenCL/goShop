@@ -16,6 +16,7 @@
         <module>go-shop-entity</module>
         <module>go-shop-redis</module>
         <module>go-shop-auth</module>
+        <module>go-shop-core</module>
     </modules>
 
     <properties>

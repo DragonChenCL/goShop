@@ -1,5 +1,6 @@
 package com.dragon.config;
 
+import com.dragon.entity.base.Result;
 import com.dragon.realm.CustomRealm;
 import org.apache.shiro.mgt.DefaultSessionStorageEvaluator;
 import org.apache.shiro.mgt.DefaultSubjectDAO;
