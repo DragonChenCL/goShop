@@ -2,6 +2,7 @@ package com.dragon.web;
 
 import com.dragon.entity.base.Result;
 import com.dragon.entity.user.UserEntity;
+import com.dragon.exception.NormalException;
 import com.dragon.service.IHelloWorldService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -22,7 +23,8 @@ public class HelloWorldController {
     @ApiOperation(value = "xxxxx",notes = "2")
     @RequiresAuthentication
     public String helloWorld(){
-        return helloWorldService.helloWorld();
+//        throw new NormalException("测试错误");
+        return "null";
     }
 
     @GetMapping("/hello2")
