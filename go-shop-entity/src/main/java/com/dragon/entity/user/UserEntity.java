@@ -13,8 +13,7 @@ import java.util.List;
 @Data
 @Entity
 @Table(name = "c_sys_user")
-public class UserEntity extends BaseEntity implements Serializable {
-    private static final long serialVersionUID = 1357900826704188523L;
+public class UserEntity extends BaseEntity {
 
     @Column(columnDefinition = "VARCHAR(20) COMMENT '用户名'",nullable = false)
     private String userName;

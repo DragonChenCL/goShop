@@ -1,8 +1,5 @@
 package com.dragon.web;
 
-import com.dragon.entity.base.Result;
-import com.dragon.entity.user.UserEntity;
-import com.dragon.exception.NormalException;
 import com.dragon.service.IHelloWorldService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

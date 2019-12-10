@@ -9,13 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>go-shop-core</artifactId>
+    <artifactId>go-shop-cache</artifactId>
 
-    <dependencies>
-        <dependency>
-            <groupId>com.dragon</groupId>
-            <artifactId>go-shop-entity</artifactId>
-            <version>${shop.version}</version>
-        </dependency>
-    </dependencies>
+
 </project>
