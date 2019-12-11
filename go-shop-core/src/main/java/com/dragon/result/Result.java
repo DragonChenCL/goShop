@@ -4,7 +4,7 @@ import lombok.Builder;
 
 @Builder
 public class Result<T> {
-    private String code;
+    private Integer code;
 
     private String message;
 

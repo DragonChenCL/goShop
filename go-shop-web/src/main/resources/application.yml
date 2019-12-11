@@ -1,5 +1,5 @@
 server:
-  port: 8100
+  port: ${shop.port}
   servlet:
     context-path: /api
 spring:
