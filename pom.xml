@@ -20,20 +20,22 @@
         <module>go-shop-cache</module>
     </modules>
 
+<!--    配置-->
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spring.framework.version>3.0.5.RELEASE</spring.framework.version>
+        <shop.version>1.0-SNAPSHOT</shop.version>
+        <shop.port>8100</shop.port>
+    </properties>
+
     <profiles>
         <profile>
             <id>dev</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
-            <build>
-            </build>
         </profile>
     </profiles>
-    <properties>
-        <shop.version>1.0-SNAPSHOT</shop.version>
-        <shop.port>8100</shop.port>
-    </properties>
 
     <dependencyManagement>
         <dependencies>

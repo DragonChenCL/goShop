@@ -13,7 +13,7 @@
     <dependencies>
         <dependency>
             <groupId>com.dragon</groupId>
-            <artifactId>go-shop-entity</artifactId>
+            <artifactId>go-shop-auth</artifactId>
             <version>${shop.version}</version>
         </dependency>
         <dependency>

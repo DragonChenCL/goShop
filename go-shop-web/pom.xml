@@ -9,6 +9,8 @@
     </parent>
 
     <artifactId>go-shop-web</artifactId>
+    <version>${shop.version}</version>
+    <packaging>jar</packaging>
 
     <properties>
         <java.version>1.8</java.version>
