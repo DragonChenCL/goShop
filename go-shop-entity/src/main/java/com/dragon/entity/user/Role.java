@@ -1,6 +1,7 @@
 package com.dragon.entity.user;
 
 import com.dragon.entity.base.BaseEntity;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -18,5 +19,6 @@ public class Role extends BaseEntity {
 
     @ManyToMany
     @JoinTable(name = "c_user_role",joinColumns = {@JoinColumn(name = "role_id")},inverseJoinColumns = {@JoinColumn(name = "user_id")})
+    @JsonIgnoreProperties("roles")
     private List<UserEntity> userEntities;
 }

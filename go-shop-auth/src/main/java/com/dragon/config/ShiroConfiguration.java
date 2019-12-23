@@ -1,5 +1,6 @@
 package com.dragon.config;
 
+import com.dragon.filter.TokenFilter;
 import com.dragon.realm.CustomRealm;
 import org.apache.shiro.mgt.DefaultSessionStorageEvaluator;
 import org.apache.shiro.mgt.DefaultSubjectDAO;
@@ -12,6 +13,8 @@ import org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreato
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import java.util.HashMap;
+import javax.servlet.Filter;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -22,8 +25,14 @@ public class ShiroConfiguration {
     public ShiroFilterFactoryBean shiroFilter(SecurityManager securityManager){
         ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
         shiroFilterFactoryBean.setSecurityManager(securityManager);
-        shiroFilterFactoryBean.setUnauthorizedUrl("/notRole");
+        // 添加自己的过滤器并且取名为token
+        Map<String, Filter> filterMap = new HashMap<>();
+        //设置我们自定义的Token过滤器
+        filterMap.put("token",new TokenFilter());
+
+        shiroFilterFactoryBean.setFilters(filterMap);
         Map<String, String> filterChainDefinitionMap = new LinkedHashMap<>();
+
         // <!-- authc:所有url都必须认证通过才可以访问; anon:所有url都都可以匿名访问-->
 //        filterChainDefinitionMap.put("/api/swagger-ui.html", "anon");
 //        filterChainDefinitionMap.put("/swagger-resources", "anon");
